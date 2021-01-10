@@ -33,6 +33,8 @@ dependencies:
   geocoding: ^1.0.5
   flutter_polyline_points: ^0.2.4
 
+  dio: ^3.0.10
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

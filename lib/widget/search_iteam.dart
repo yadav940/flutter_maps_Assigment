@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_maps/model/crop_iteam_resp.dart';
 class SearchIteam extends StatelessWidget {
+  CropIteamResp cropIteamResp;
+
+
+  SearchIteam(this.cropIteamResp);
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -9,16 +15,16 @@ class SearchIteam extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(width: 10,),
+            const SizedBox(width: 7,),
             SizedBox(
-              height: 20,
+              height: 18,
               child: Image.network(
-                "https://firebasestorage.googleapis.com/v0/b/vesatogofleet.appspot.com/o/androidTaskApp%2Fbanana.png?alt=media&token=77d836a0-7bda-439b-94d1-a022b9781949",
+                cropIteamResp.photo,
                 fit: BoxFit.cover,
               ),
             ),
-            const SizedBox(width: 10,),
-            Text("Banana ")
+            const SizedBox(width: 7,),
+            Text(cropIteamResp.commodityName)
           ],
         ),
       ),
